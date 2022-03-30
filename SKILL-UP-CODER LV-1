@@ -1,0 +1,80 @@
+//INTEGER DIVISION (PYTHON APPROACH)
+a=int(input()) 
+print(a//10)   //Floor Division is used for accurate value
+
+//AREA OF CIRCLE  (C APPROACH)
+#include<stdio.h>
+int main(){
+    float radius,area;
+    scanf("%f",&radius);
+    area=3.14*radius*radius;
+    printf("%.2f",area); //IT IS USED TO PRINT UPTO TWO DECIMAL PLACES
+    return 0;
+}
+
+//COMPOUND INTEREST (C APPROACH)
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double p, r, t, CI;
+    scanf("%lf", &p);
+    scanf("%lf", &r);
+    scanf("%lf", &t);
+    CI = p* (pow((1 + r / 100), t));
+    /* Print the resultant CI */
+    printf("%.2lf",(CI)); //PRINTS UPTO TWO DECIMAL VALUES
+    return 0;
+}
+
+//SIMPLE INTEREST (C++ APPROACH)
+#include<iostream>
+using namespace std;
+int main(){
+    int a,p,t,r;
+    cin>>p>>t>>r;
+    a=(p*t*r)/100;
+    cout<<a;
+}
+
+//ADDING DIGITS UNTIL THE RESULT BECOMES ONLY ONE DIGIT (C++ APPROACH) 
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int num,sum=0;
+    cin>>num;
+    while(num>0 || sum>9){
+        if(num==0){
+            num=sum;
+            sum=0;
+        }
+        sum=sum+num%10;
+        num=num/10;
+    }
+    cout<<sum;
+}
+
+//PERFECT NUMBER(INTEGER i.e, EQUAL TO THE SUM OF ALL ITS +ve DIVISORS EXCEPT ITSELF) (C APPROACH)
+#include<stdio.h>
+int main()
+{
+int i, n, sum = 0;
+scanf("%d", &n);
+for(i=1; i<n; i++){
+  if(n%i == 0)
+  {
+   sum += i;
+  }
+}
+if(sum == n)
+{
+printf("True");
+}
+else
+{
+printf("False");
+}
+return 0;
+}
+
+//SELF DIVIDING NUMBER (NOT DONE)
