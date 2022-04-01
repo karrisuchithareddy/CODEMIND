@@ -1,0 +1,94 @@
+//ADAM NUMBER (Adam number is a number when reversed, the square of the number and the square of the reversed number should be numbers which are the reverse of each other)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,rev=0,temp,rev1=0,r;
+    cin>>n;
+    temp=n;
+    while(n!=0)
+    {
+      rev=rev*10+n%10;
+      n=n/10;
+    }
+    r=rev*rev;
+    while(r!=0)
+    {
+     rev1=rev1*10+r%10;
+      r=r/10;   
+    }
+    if(temp*temp==rev1)
+    {
+        cout<<"True"<<endl;
+    }
+    else
+    {
+        cout<<"False"<<endl;
+    }
+}
+
+//DISARIUM NUMBER ( the sum of its digit raised to the power of their respective positions becomes equal to the number itself) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,digit=0,temp,sum=0;
+    cin>>n;
+    temp=n;
+    while(n>0){
+        digit+=1;
+        n/=10;
+    }
+    n=temp;
+    for(int i=digit;i>0;i--){
+        sum=sum+pow(n%10,i);
+        n/=10;
+    }
+    if(sum==temp){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+//ABUNDANT NUMBER(A number is abundant if sum of the proper factors of the number is greater than the number)  (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,sum=0;
+    cin>>N;
+    for(int i=1;i<N;i++){
+        if(N%i==0){
+            sum=sum+i;
+        }
+    }
+    
+    if(sum>N){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+//CLOSEST PALINDROME (NOT DONE)
+
+//PALINDROME(if given number and its reversed number are same then its a palindrome) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,rev=0,a,b;
+    cin>>N;
+    a=N;
+    while(N!=0){
+        b=N%10;
+        rev=rev*10+b;
+        N=N/10;
+    }
+    if(a==rev){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
