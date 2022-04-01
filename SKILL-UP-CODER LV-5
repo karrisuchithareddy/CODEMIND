@@ -1,0 +1,96 @@
+//HARSHED NUMBER (A number divisible by the sum of its digit) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,sum=0,temp;
+    cin>>n;
+    for(temp=n;temp>0;temp/=10){
+        sum+=temp%10;
+    }
+    if(n%sum==0){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+//HAPPY NUMBER(if it yields 1 or 7 when replaced by the sum of squares of its digits repeatedly) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,sum=0;
+    cin>>n;
+    while(n!=0 || sum>9){
+        if(n==0){
+            n=sum;
+            sum=0;
+        }
+        sum=sum+pow(n%10,2);
+        n=n/10;
+    }
+    if(sum==1 || sum==7){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+//GCD or HCF (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,M,gcd;
+    cin>>N>>M;
+    for(int i=1;i<=N && i<=M;i++){
+        if(N%i==0 && M%i==0){
+            gcd=i;
+        }
+    }
+    cout<<gcd;
+}
+
+//FIBONACCI OR NOT (C++ APPROACH)
+include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,f1=0,f2=1,f,count=0;
+    cin>>N;
+    for(int i=1;i<N;i++){
+        f=f1+f2;
+        if(f==N){
+            cout<<"True";
+            count=1;
+            break;
+        }
+        f1=f2;
+        f2=f;
+    }
+    if(count==0){
+        cout<<"False";
+    }
+}
+
+//FIBONACCI (UPTO GIVEN RANGE) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,f1=0,f2=1,f=0;
+    cin>>N;
+    for(int i=1;i<=N;i++){
+        if(i==1){
+            cout<<f1<<" ";
+            continue;
+        }
+        if(i==2){
+            cout<<f2<<" ";
+            continue;
+        }
+        f=f1+f2;
+        f1=f2;
+        f2=f;
+        
+        cout<<f<<" ";
+    }
+}
