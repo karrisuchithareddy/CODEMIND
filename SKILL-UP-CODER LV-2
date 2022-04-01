@@ -1,1 +1,68 @@
+//MAXIMUM 69 NUMBER (NOT DONE)
 
+
+//SPY NUMBER (An integer is said to be spy is sum of its digits equal to product of its digits) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b,sum=0,prod=1;
+    cin>>a;
+    while(a>0){
+        b=a%10;
+        sum=sum+b;
+        prod=prod*b;
+        a=a/10;
+    }
+    if(sum==prod){
+        cout<<"Spy Number"<<endl;
+    }
+    else{
+        cout<<"Not Spy Number"<<endl;
+    }
+    return 0;
+}
+
+//NEON NUMBER (An integer is said to be neon if sum of digits of the square of the number is equal to the number) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int N,a,b,sum=0;
+    cin>>N;
+    a=N*N;
+    while(a!=0){
+        b=a%10;
+        sum=sum+b;
+        a=a/10;
+    }
+    if(sum==N){
+        cout<<"Neon Number"<<endl;
+    }
+    else{
+        cout<<"Not Neon Number"<<endl;
+    }
+    return 0;
+}
+
+//NEAREST FIBONACCI (NOT DONE)
+
+
+//LCM (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b,lcm;
+    cin>>a>>b;
+    if(a>b){
+        lcm=a;
+    }
+    else{
+        lcm=b;
+    }
+    while(1){
+        if(lcm%a==0 && lcm%b==0){
+            cout<<lcm;
+            break;
+        }
+        lcm++;
+    }
+}
