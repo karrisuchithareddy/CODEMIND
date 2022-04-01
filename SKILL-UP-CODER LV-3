@@ -1,0 +1,80 @@
+//REVERSE INTEGER (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,rem=0,b;
+    cin>>a;
+    while(a!=0){
+        b=a%10;
+        rem=rem*10+b;
+        a=a/10;
+    }
+    cout<<rem<<endl;
+}
+
+//PRONIC NUMBER OR HETROMECIC NUMBER (An integer is said to be pronic if it can be expressed as probuct of two consecutive integers) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,count;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(i*(i+1)==n){
+            count=1;
+            break;
+        }
+    }
+    if(count==1){
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
+}
+
+//AUTOMORPHIC NUMBER (An integer is said to be automorphic if its square ends with the same digit as original number (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,temp,count=1,sq;
+    cin>>n;
+    temp=n;
+    sq=n*n;
+    while(n!=0){
+        count*=10;
+        n=n/10;
+    }
+    if(sq%count==temp){
+        cout<<"Automorphic Number"<<endl;
+    }
+    else{
+        cout<<"Not an Automorphic Number"<<endl;
+    }
+}
+
+//AMICABLE NUMBER (If sum of the proper divisors of each equal to the other number) (C++ APPROACH)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int m,n,sum1=0,sum2=0;
+    cin>>m;
+    cin>>n;
+    for(int i=1;i<m;i++){
+        if(m%i==0){
+            sum1+=i;
+        }
+    }
+    for(int i=1;i<n;i++){
+        if(n%i==0){
+            sum2+=i;
+        }
+    }
+    if(m==sum2 && n==sum1){
+        cout<<"Amicable";
+    }
+    else{
+        cout<<"Not Amicable";
+    }
+}
+
+//UNIQUE NUMBER (NOT DONE)
